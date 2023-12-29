@@ -1,0 +1,38 @@
+{
+  "name": "QR code phishing detector",
+  "version": "1.1",
+  "description": "Scans QR codes on any web page or PDF",
+  "manifest_version": 3,
+  "permissions": [
+    "activeTab","storage",
+    "activeTab"
+  ],
+  
+  "icons": {
+    "16": "images/icon.png",
+    "32": "images/icon.png",
+    "48": "images/icon.png",
+    "128": "images/icon.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["data.JSON",
+        "src/scanner*",
+        "*.html"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "action": {
+    "default_popup": "src/popup.html",
+    "default_icon": {
+      "16": "images/icon.png",
+      "32": "images/icon.png",
+      "48": "images/icon.png",
+      "128": "images/icon.png"
+    }
+  },
+  "content_security_policy": {}
+}
